@@ -1,20 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, SafeAreaView, Text, TouchableOpacity } from 'react-native';
+import { React } from "react";
+import  styles  from './components/Layout';
+import {DropDown, Value, ItemSelect, ItemSelect2, cambio} from "./components/TaskItem";
 
-export default function App() {
+export const App = () => {
+
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    <SafeAreaView style={{flex:1, backgroundColor: '#232321'}}>
+      <View style={styles.container}>
+        <View style={styles.contentTitle}>
+        <Text style={styles.title}>Change Money</Text>   
+        </View>
+      
+        <DropDown/>
+        
+      </View>
+    </SafeAreaView>
+  )}
+export default App
